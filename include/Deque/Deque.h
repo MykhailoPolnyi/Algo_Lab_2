@@ -8,6 +8,7 @@ class Deque {
 protected:
 	Node<T>* front;
 	Node<T>* back;
+
 public:
 	Deque<T>() :front(nullptr), back(nullptr) {};
 	~Deque() {};
@@ -20,11 +21,19 @@ public:
 
 	T getBack();
 	T getFront();
+
+	bool isEmpty();
 };
+
+
+template<class T>
+bool Deque<T>::isEmpty() {
+	return (front == nullptr) && (back == nullptr);
+}
 
 template<class T>
 void Deque<T>::pushBack(T newValue) {
-	if ((back == front) && (back == nullptr)) {
+	if (isEmpty()) {
 		back = new Node<T>(newValue);
 		front = back;
 	}
