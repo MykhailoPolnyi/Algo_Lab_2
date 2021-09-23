@@ -1,6 +1,6 @@
-#Laboratory work 2 (data structures)
+# Laboratory work 2 (data structures)
 
-##Task: 
+## Task: 
 
 Implement data structure - **Deque**.
 
