@@ -44,6 +44,7 @@ TEST(NodePointers, NextNode) {
 TEST(EmptyDequeTest, EmptyDeque) {
 	Deque<int> testDq;
 
+	EXPECT_EQ(testDq.isEmpty(), true);
 	EXPECT_EQ(testDq.getBack(), NULL);
 	EXPECT_EQ(testDq.getFront(), NULL);
 }
